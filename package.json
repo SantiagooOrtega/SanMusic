@@ -1,0 +1,14 @@
+{
+  "name": "music-san",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"red,blue\" \"npm run dev --prefix music-player-backend\" \"npm run dev --prefix music-player-frontend\"",
+    "build": "npm run build --prefix music-player-frontend && npm run build --prefix music-player-backend",
+    "start": "npm run start --prefix music-player-backend",
+    "install:all": "npm install --prefix music-player-backend && npm install --prefix music-player-frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
